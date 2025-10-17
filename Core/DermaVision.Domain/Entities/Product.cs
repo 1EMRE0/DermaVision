@@ -17,6 +17,8 @@ namespace DermaVision.Domain.Entities
 
         public int CategoryId { get; set; }
 
+        public string SkinType { get; set; } //ürünün hangi cilt tipi ile uygun olduğu.
+
         public Category Category { get; set; } 
 
         public void UpdateStcok(int amount)
