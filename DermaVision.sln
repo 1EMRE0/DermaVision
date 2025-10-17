@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DermaVision.Domain", "Core\DermaVision.Domain\DermaVision.Domain.csproj", "{E5CFA843-FB26-4DE8-B469-6A2F01C0BF20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{2F152194-F037-4B02-9E81-09699EAF7F27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DermaVision.Persistence", "Infrastructure\DermaVision.Persistence\DermaVision.Persistence.csproj", "{B5CF2EF2-1236-47D4-B974-C099A87EB987}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{E5CFA843-FB26-4DE8-B469-6A2F01C0BF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5CFA843-FB26-4DE8-B469-6A2F01C0BF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5CFA843-FB26-4DE8-B469-6A2F01C0BF20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5CF2EF2-1236-47D4-B974-C099A87EB987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5CF2EF2-1236-47D4-B974-C099A87EB987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5CF2EF2-1236-47D4-B974-C099A87EB987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5CF2EF2-1236-47D4-B974-C099A87EB987}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E5CFA843-FB26-4DE8-B469-6A2F01C0BF20} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{B5CF2EF2-1236-47D4-B974-C099A87EB987} = {2F152194-F037-4B02-9E81-09699EAF7F27}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A32EA9D8-F87A-4652-947C-15950A3DC605}
