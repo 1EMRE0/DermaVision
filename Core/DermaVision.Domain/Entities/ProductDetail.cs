@@ -9,8 +9,8 @@ namespace DermaVision.Domain.Entities
     public class ProductDetail
     {
         public int ProductDetailId { get; set; }
-        public string ProductDescription { get; set; }
-        public string ProductInfo { get; set; }
+        public string? ProductDescription { get; set; }
+        public string? ProductInfo { get; set; }
         
     }
 }
