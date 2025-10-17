@@ -18,6 +18,7 @@ namespace DermaVision.Domain.Entities
         public int CategoryId { get; set; }
 
         public Category Category { get; set; } 
+
         public void UpdateStcok(int amount)
         {
             if(amount < 0)
