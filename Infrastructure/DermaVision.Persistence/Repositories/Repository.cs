@@ -17,9 +17,10 @@ namespace DermaVision.Persistence.Repositories
             _context = context;
         }
 
-        public Task CreateAsync(T entity)
+        public async Task CreateAsync(T entity)
         {
-            throw new NotImplementedException();
+            await _context.Set<T>().AddAsync(entity); //Set<T> veritabanındaki T türüne karşılık gelen DbSet’i (tabloyu) döndürür.
+            await _context.SaveChangesAsync();
         }
 
         public Task<List<T>> GetAllAsync()
