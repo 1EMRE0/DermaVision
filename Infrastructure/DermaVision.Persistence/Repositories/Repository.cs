@@ -10,7 +10,13 @@ namespace DermaVision.Persistence.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly DermaVisionContext _context;
+        private readonly DermaVisionContext _context; //ef core da repositorynin veritabanı işlemleri yapabilmesi için contextbağımlılığı nesnesi oluşturdum.
+
+        public Repository(DermaVisionContext context)
+        {
+            _context = context;
+        }
+
         public Task CreateAsync(T entity)
         {
             throw new NotImplementedException();
