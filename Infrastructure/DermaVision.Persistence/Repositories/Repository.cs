@@ -1,5 +1,6 @@
 ﻿using DermaVision.Application.Interfaces;
 using DermaVision.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +24,10 @@ namespace DermaVision.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public Task<List<T>> GetAllAsync()
+        public async Task<List<T>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Set<T>().ToListAsync();
+
         }
 
         public Task<T> GetByIdAsync(int id)
