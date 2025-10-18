@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\DermaVision.Application\DermaVision.Application.csproj" />
     <ProjectReference Include="..\..\Core\DermaVision.Domain\DermaVision.Domain.csproj" />
   </ItemGroup>
 
