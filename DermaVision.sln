@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DermaVision.Persistence", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{51EA1A79-6E3C-474D-B7F7-0025A578BE83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DermaVision.WebApi", "Presentation\DermaVision.WebApi\DermaVision.WebApi.csproj", "{2C6C4986-2175-412E-B0FA-8B96E5318807}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DermaVision.Application", "Core\DermaVision.Application\DermaVision.Application.csproj", "{15D7D282-41F6-40E3-BC1D-5C1EA2A31D64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{B5CF2EF2-1236-47D4-B974-C099A87EB987}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5CF2EF2-1236-47D4-B974-C099A87EB987}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5CF2EF2-1236-47D4-B974-C099A87EB987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C6C4986-2175-412E-B0FA-8B96E5318807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C6C4986-2175-412E-B0FA-8B96E5318807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C6C4986-2175-412E-B0FA-8B96E5318807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C6C4986-2175-412E-B0FA-8B96E5318807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15D7D282-41F6-40E3-BC1D-5C1EA2A31D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15D7D282-41F6-40E3-BC1D-5C1EA2A31D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15D7D282-41F6-40E3-BC1D-5C1EA2A31D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15D7D282-41F6-40E3-BC1D-5C1EA2A31D64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,6 +46,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E5CFA843-FB26-4DE8-B469-6A2F01C0BF20} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B5CF2EF2-1236-47D4-B974-C099A87EB987} = {2F152194-F037-4B02-9E81-09699EAF7F27}
+		{2C6C4986-2175-412E-B0FA-8B96E5318807} = {51EA1A79-6E3C-474D-B7F7-0025A578BE83}
+		{15D7D282-41F6-40E3-BC1D-5C1EA2A31D64} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A32EA9D8-F87A-4652-947C-15950A3DC605}

@@ -12,7 +12,7 @@ namespace DermaVision.Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost; initial Catalog=DermaVisionDb;integrated Security=true;");
+            optionsBuilder.UseSqlServer("Server=localhost; initial Catalog=DermaVisionDb;integrated Security=true;TrustServerCertificate=True;");
         }
 
         public DbSet<Category> Categories { get; set; }
