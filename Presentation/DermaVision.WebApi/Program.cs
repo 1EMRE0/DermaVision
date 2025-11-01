@@ -1,34 +1,48 @@
-using DermaVision.Application.Features.CQRS.Handlers.CategoryHandlers;
+﻿using DermaVision.Application.Features.CQRS.Handlers.CategoryHandlers;
+using DermaVision.Application.Interfaces;
 using DermaVision.Persistence.Context;
+using DermaVision.Persistence.Repositories;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// --- CQRS/Repository Bağımlılık Kayıtları ---
 builder.Services.AddScoped<DermaVisionContext>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
 builder.Services.AddScoped<GetCategoryQueryHandler>();
 builder.Services.AddScoped<GetByIdCategoryQueryHandler>();
 builder.Services.AddScoped<CreateCategoryCommandHandler>();
 builder.Services.AddScoped<UpdateCategoryCommandHandler>();
 builder.Services.AddScoped<RemoveCategoryCommandHandler>();
 
-
-
+// --- Controller ve Swagger Hizmetleri ---
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+
+// 🔥 Swagger Ayarları
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "DermaVision API",
+        Version = "v1",
+        Description = "DermaVision Web API with CQRS and Repository Pattern"
+    });
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// --- Swagger her ortamda aktif ---
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.MapOpenApi();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "DermaVision API v1");
+    c.RoutePrefix = "swagger"; // 👉 Artık https://localhost:7013/swagger adresinde açılır
+});
 
+// --- Middleware zinciri ---
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
