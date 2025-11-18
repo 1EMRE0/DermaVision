@@ -1,4 +1,5 @@
-﻿using DermaVision.Application.Interfaces;
+﻿using DermaVision.Application.Features.CQRS.Commands.ProductCommands;
+using DermaVision.Application.Interfaces;
 using DermaVision.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,21 @@ namespace DermaVision.Application.Features.CQRS.Handlers.ProdctHandlers
             _repository = repository;
         }
 
-        //public async Task Handle()
+        public async Task Handle(CreateProductCommand command )
+        {
+            await _repository.CreateAsync(new Product
+            {
+
+                ProductDescription = command.ProductDescription,
+                ProductImageUrl = command.ProductImageUrl,
+                ProductName = command.ProductName,
+                ProductPrice = command.ProductPrice,
+                ProductStock = command.ProductStock,
+                SkinType = command.SkinType,
+                CategoryId = command.CategoryId
+
+
+            });
+        }
     }
 }
